@@ -1,6 +1,8 @@
 # stdio-games
 
-A collection of games and animations, as well as short interactive scripts, that use only the standard i/o (input/output).
+A collection of games and animations, as well as animations, that use only the standard i/o (input/output).
+
+They are coded in [Python](https://docs.python.org/), [Java](https://java.com/), and [C++](https://devdocs.io/cpp/)
 
 ## Installation
 
