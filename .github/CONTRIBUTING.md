@@ -8,4 +8,4 @@ So, you want to contribute? If you want to add a game, make a pull request with 
 
 Any games you add must be well commented. This repository is meant to be for everyone from beginner to advanced. 
 
-Games must also me a maximum of 220 lines. This was picked randomly, but too much more becomes hard to understand. 
+Games must also be a maximum of 250 lines. This was picked randomly, but too much more becomes hard to understand. 
