@@ -1,8 +1,10 @@
 # stdio-games
 
+<link rel="stylesheet" href="https://gist.githubusercontent.com/ollytheninja/8498790/raw/0f09d2185024615b7c987b9ac0ddedac081d5a4d/Antimony.css"/>
+
 A collection of games and animations, as well as animations, that use only the standard i/o (input/output).
 
-They are coded in [Python](https://docs.python.org/), [Java](https://java.com/), and [C++](https://devdocs.io/cpp/)
+They are coded in [Python](https://docs.python.org/), [Java](https://java.com/), and [C++](https://devdocs.io/cpp/).
 
 ## Installation
 
@@ -89,7 +91,7 @@ It should start running the code!
 
 ## Contributing:
 
-I welcome contributions. If you want to help, see the [contributing docs](.github/CONTRIBUTING.md)
+I welcome contributions. If you want to help, see the [contributing docs](docs/CONTRIBUTING.md).
 
 ## Other stuff
 
