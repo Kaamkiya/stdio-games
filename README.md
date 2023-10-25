@@ -85,9 +85,11 @@ $ python <FILE>.py
 
 It should start running the code!
 
-## Other stuff
+## Contributing:
 
-I welcome contributions.
+I welcome contributions. If you want to help, see the [contributing docs](.github/CONTRIBUTING.md)
+
+## Other stuff
 
 A list of things for me to make and add here:
 
