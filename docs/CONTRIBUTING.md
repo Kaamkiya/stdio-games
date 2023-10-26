@@ -1,3 +1,8 @@
+---
+permalink: /docs/contributing.html
+title: STDIO Games | Contributing
+---
+
 # Contributing
 
 If you just want me to add a game, create an issue for this repo. 
