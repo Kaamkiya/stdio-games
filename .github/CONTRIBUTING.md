@@ -1,6 +1,6 @@
 ---
-permalink: /docs/contributing.html
-title: STDIO Games | Contributing
+permalink: /.github/contributing.html
+title: Contributing
 ---
 
 # Contributing

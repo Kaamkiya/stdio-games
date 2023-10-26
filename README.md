@@ -89,7 +89,7 @@ It should start running the code!
 
 ## Contributing:
 
-I welcome contributions. If you want to help, see the [contributing docs](docs/CONTRIBUTING.md).
+I welcome contributions. If you want to help, see the [contributing docs](.github/CONTRIBUTING.md).
 
 ## Credits
 
