@@ -32,8 +32,8 @@ def place(turn):
             board[int(pos[0])][int(pos[1])] = turn
         else: # if that spot is taken
             print('Must be Y-coordinate+X-coordinate. Eg, 02')
-            place(turn)            
-    except Error:
+            place(turn)
+    except:
         print('Must be Y-coordinate+X-coordinate. Eg, 02')
         place(turn) # if the user enters anything other than a number
 
@@ -97,26 +97,26 @@ def check_win(b):
             if b[i][j] == 'o':
                 o += 1
 
-    x = 0         
+    x = 0
     for i in range(3):
         if ' ' not in b[i]:
             x += 1
-    
+
     if x == 3:
         print('Tie')
         return 'gameover'
-        
+
 
 while True:
     print_board(board)
     print('%s\'s turn' %turn)
     place(turn)
-    
+
     if turn=='x':
         turn = 'o'
     else:
         turn = 'x'
-        
+
     if check_win(board) == 'gameover':
         print_board(board)
         break
