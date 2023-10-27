@@ -3,16 +3,17 @@ Anagrams
 by Kaamkiya
 """
 
-with open('words.txt') as f:
+with open('words.txt', 'r', encoding='UTF-8') as f:
     words = f.readlines() # add all of the words from words.txt to a list
-    
+
     for i, word in enumerate(words):
         words[i] = word.strip() # remove the pesky '\n' at the end of each word
 
 def is_anagram(word1, word2):
+    """Check if a word is an anagram of another word"""
     word1 = word1.lower() # make the words lowercase so that casing doesn't matter
     word2 = word2.lower()
-    
+
     word1 = sorted(list(word1)) # split the words into a list and sort the letters
     word2 = sorted(list(word2)) # this permits you to compare the sotred lists
     return word1 == word2 # instead of finding another long way to do it
