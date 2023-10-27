@@ -3,7 +3,7 @@ Anagrams
 by Kaamkiya
 """
 
-with open('words.txt', 'r', encoding='UTF-8') as f:
+with open('../assets/words.txt', 'r', encoding='UTF-8') as f:
     words = f.readlines() # add all of the words from words.txt to a list
 
     for i, word in enumerate(words):
