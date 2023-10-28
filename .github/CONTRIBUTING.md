@@ -1,5 +1,5 @@
 ---
-permalink: /.github/contributing.html
+permalink: /.github/CONTRIBUTING.md
 title: Contributing
 ---
 
