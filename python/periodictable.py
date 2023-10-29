@@ -28,12 +28,12 @@ while True:
 
             Ce Pr Nd Pm Sm Eu Gd Tb Dy Ho Er Tm Yb Lu
             Th Pa U  Np Pu Am Cm Bk Cf Es Fm Md No Lr''')
-    
+
     print('\nEnter an element symbol to examine, or QUIT to quit.')
-    
+
     # get the input, make it title case, and remove the whitespace
     response = input('> ').title().strip()
-    
+
     if response == 'Quit':
         break # exit the program
     

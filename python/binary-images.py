@@ -41,14 +41,14 @@ def print_image(image):
     """Print an image"""
     width = image.width
     height = image.height
-    
+
     image = image.data.replace('0', ' ').replace('1', chr(9606)) # try replacing this with 0x25a9
     for i in range(width * (height - 1)):
         print(image[i], end='')
-        
+
         if i % width == 0:
             print() # newline after each row
-    
+
     print()
 
 
@@ -63,7 +63,7 @@ print('-' * get_terminal_size()[0])
 
 print_image(IMAGES['coffee'])
 
-'''
+"""
 TO GET IMAGE DATA
 
 go to
@@ -76,4 +76,4 @@ Copy the first thing that shows up in the console when you run it.
 That's the data.
 
 Copy the second for the width, and the third for the height
-'''
+""""""
