@@ -2,7 +2,7 @@
 
 A collection of games and animations, as well as animations, that use only the standard i/o (input/output).
 
-They are coded in [Python](https://docs.python.org/), [Java](https://java.com/), and [C++](https://devdocs.io/cpp/).
+They are coded in [C++](https://devdocs.io/cpp/), [Python](https://docs.python.org/), [Ruby](https://ruby-lang.org/), and [Java](https://java.com/).
 
 ## Installation
 
@@ -17,10 +17,6 @@ Then `cd` into the directory:
 ```bash
 $ cd stdio-games
 ```
-
-Now you can start playing!
-
-<hr/>
 
 ## Playing
 
@@ -44,10 +40,17 @@ $ ./a.out
 
 This will tell the terminal/command prompt to execute the compiled code. That's it!
 
-### Java
+### Python
 
-> [!NOTE]
-> You need to have the jdk installed to run the Java games
+The first step is to `cd` into the folder
+
+```bash
+$ python <FILE>.py
+```
+
+It should start running the code!
+
+### Java
 
 To run the Java games, `cd` into the folder:
 
@@ -71,21 +74,6 @@ $ java <FILE>
 
 Where `<FILE>` is the name of the file you compiled. 
 
-### Python
-
-> [!NOTE]
-> Please make sure you have Python installed before you try running these scripts.
-
-The first step is to `cd` into the folder
-
-```bash
-$ python <FILE>.py
-```
-
-> [!IMPORTANT]
-> On Linux, use `python3` instead of `python`.
-
-It should start running the code!
 
 ## Contributing:
 
