@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>STDIO Games</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro" />
+
+    <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/styles/default.min.css" id="hljs-style">
+    <script src="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/highlight.min.js"></script>
+    <style>
+      * {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, sans-serif;
+      }
+      
+      code {
+        font-family: 'Source Code Pro';
+      }
+    </style>
+  </head>
+  <body>
+    <h1>stdio-games</h1>
+    <button id="theme-button">☼</button>
+    <hr/>
+    <div id="info">
+      This is a collection of games, animations, and other cool things. <br/>
+      They are coded in 
+        <a href="https://python.org/">Python</a>, 
+        <a href="https://ruby-lang.org/">Ruby</a>,
+        <a href="https://devdocs.io/cpp/">C++</a>, and
+        <a href="https://java.com/">Java</a>.
+    </div>
+    <div id="installation">
+      <h3>Installation</h3>
+      <hr/>
+      <p>You need to have git installed to play these games. Run the following command to clone the repo:</p>
+      <pre class="language-bash">
+        <code>
+git clone https://github.com/Kaamkiya/stdio-games.git
+        </code>
+      </pre>
+      <p>Then <code>cd</code> into the directory:</p>
+      <pre>
+        <code>
+cd stdio-games
+        </code>
+      </pre>
+    </div>
+    <div id="playing">
+      <h3>Playing</h3>
+      <hr/>
+      <details>
+        <summary>Python</summary>
+        <br/>
+        The first thing is to <code>cd</code> into the folder:
+        <pre>
+          <code class="language-bash">
+cd python
+          </code>
+        </pre>
+        <p>Then use the <code>python</code> <em>or</em> the <code>python3</code> command to play the game:</p>
+        <pre class="language-bash">
+          <code>
+python &lt;GAME&gt;.py
+          </code>
+        </pre>
+        <p>Make sure to replace &lt;GAME&gt; with one of the actual games in the folder!</p>
+      </details>
+      
+      <br/>
+      
+      <details>
+        <summary>Ruby</summary>
+        <br/>
+        The first step is to <code>cd</code> into the folder:
+        <pre class="language-bash">
+          <code>
+cd ruby
+          </code>
+        </pre>
+        <p>Then use the <code>ruby</code> command to play the game:</p>
+        <pre>
+          <code>
+ruby &lt;GAME&gt;.rb
+          </code>
+        </pre>
+        <p>Make sure to replace &lt;GAME&gt; with one of the actual games in the folder!</p>
+      </details>
+      
+      <br/>
+      
+      <details>
+        <summary>C++</summary>
+        <br/>
+        The first thing is to <code>cd</code> into the folder:
+        <pre class="language-bash">
+          <code>
+cd cpp
+          </code>
+        </pre>
+        <p>Then use the <code>g++</code> command to <strong>compile</strong> the game</p>
+        <pre>
+          <code>
+g++ -o a.out &lt;GAME&gt;.cpp
+          </code>
+        </pre>
+        <p>Make sure to replace &lt;GAME&gt; with one of the actual games in the folder!<br/>
+        Then run the following command to run the compiled code:</p>
+        <pre class="language-bash">
+          <code>
+./a.out
+          </code>
+        </pre>
+      </details>
+            
+      <br/>
+      
+      <details>
+        <summary>Java</summary>
+        <br/>
+        The first thing is to <code>cd</code> into the folder:
+        <pre class="language-bash">
+          <code>
+cd java
+          </code>
+        </pre>
+        <p>Then use the <code>javac</code> command to <strong>compile</strong> the game</p>
+        <pre class="language-bash">
+          <code>
+javac &lt;GAME&gt;java
+          </code>
+        </pre>
+        <p>Make sure to replace &lt;GAME&gt; with one of the actual games in the folder!<br/>
+        Then use the <code>java</code> command to run the compiled code:</p>
+        <pre>
+          <code>
+java &lt;GAME&gt;
+          </code>
+        </pre>
+      </details>
+    </div>
+
+    <script>hljs.highlightAll()</script>
+
+    <!--Theme manager-->
+    <script>
+      const themeImporter = document.querySelector('#hljs-style');
+      let theme = 'light';
+      const themeButton = document.querySelector('#theme-button');
+      
+      themeButton.onclick = function() {
+        if (theme == 'light') {
+          theme = 'dark';
+          themeImporter.setAttribute('href', 'https://unpkg.com/@highlightjs/cdn-assets@11.9.0/styles/nord.min.css');
+          themeButton.innerText = '☼';
+        } else {
+          theme = 'light';
+          themeImporter.setAttribute('href', 'https://unpkg.com/@highlightjs/cdn-assets@11.9.0/styles/default.min.css');
+          themeButton.innerText = '☾';
+        }
+      };
+    </script>
+  </body>
+</html>
