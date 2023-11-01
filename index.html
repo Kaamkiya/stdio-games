@@ -2,12 +2,20 @@
 <html>
   <head>
     <meta charset="utf-8"/>
+    <meta name="color-scheme" content="light" id="document-theme"/>
     <title>STDIO Games</title>
+    
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro" />
 
     <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/styles/default.min.css" id="hljs-style">
     <script src="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/highlight.min.js"></script>
+    
     <style>
+      html,body {
+        margin: 0.5em;
+        padding: 0.5em;
+      }
+      
       * {
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, sans-serif;
       }
@@ -126,7 +134,7 @@ cd java
         <p>Then use the <code>javac</code> command to <strong>compile</strong> the game</p>
         <pre class="language-bash">
           <code>
-javac &lt;GAME&gt;java
+javac &lt;GAME&gt;.java
           </code>
         </pre>
         <p>Make sure to replace &lt;GAME&gt; with one of the actual games in the folder!<br/>
@@ -139,10 +147,18 @@ java &lt;GAME&gt;
       </details>
     </div>
 
+    <div id="contributing">
+      <h3>Contributing</h3>
+      <p>
+        I welcome contributions. If you'd like to contributing, see the <a href="./contributing.html">contributing docs</a>.
+      </p>
+    </div>
+
     <script>hljs.highlightAll()</script>
 
     <!--Theme manager-->
     <script>
+      const metaTheme = document.querySelector('#document-theme');
       const themeImporter = document.querySelector('#hljs-style');
       let theme = 'light';
       const themeButton = document.querySelector('#theme-button');
@@ -152,10 +168,12 @@ java &lt;GAME&gt;
           theme = 'dark';
           themeImporter.setAttribute('href', 'https://unpkg.com/@highlightjs/cdn-assets@11.9.0/styles/nord.min.css');
           themeButton.innerText = '☼';
+          metaTheme.setAttribute('content', theme);
         } else {
           theme = 'light';
           themeImporter.setAttribute('href', 'https://unpkg.com/@highlightjs/cdn-assets@11.9.0/styles/default.min.css');
           themeButton.innerText = '☾';
+          metaTheme.setAttribute('content', theme);
         }
       };
     </script>
