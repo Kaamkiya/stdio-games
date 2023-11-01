@@ -20,7 +20,8 @@ $ cd stdio-games
 
 ## Playing
 
-### C++
+<details>
+<summary><h4>C++</h4></summary>
 
 To play the C++ games, you have to `cd` into the `cpp` folder. 
 
@@ -39,8 +40,10 @@ $ ./a.out
 ```
 
 This will tell the terminal/command prompt to execute the compiled code. That's it!
+</details>
 
-### Python
+<details>
+<summary><h4>Python</h4></summary>
 
 The first step is to `cd` into the folder:
 
@@ -55,8 +58,10 @@ $ python <FILE>.py
 ```
 
 It should start running the code!
+</details>
 
-### Ruby
+<details>
+<summary><h4>Ruby</h4></summary>
 
 To run the Ruby games, `cd` into the directory:
 
@@ -71,8 +76,10 @@ $ ruby <FILE>.rb
 ```
 
 Make sure to replace `<FILE>` with one of the files in the folder!
+</details>
 
-### Java
+<details>
+<summary><h4>Java</h4></summary>
 
 To run the Java games, `cd` into the folder:
 
@@ -95,7 +102,7 @@ $ java <FILE>
 ```
 
 Where `<FILE>` is the name of the file you compiled. 
-
+</details>
 
 ## Contributing:
 
