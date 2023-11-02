@@ -4,7 +4,7 @@ Maze
 This is a maze game
 """
 
-playerx = playery = exitx = exity = None
+playerx = playery = EXITX = EXITY = None
 MAZE = WIDTH = HEIGHT = None
 
 PLAYER = '@' # try changing this
@@ -19,7 +19,7 @@ BLOCK = chr(9608) # what the player sees as the wall: '█'
 
 def init():
     """Initialized the game"""
-    global WIDTH, HEIGHT, MAZE, playerx, playery, exitx, exity
+    global WIDTH, HEIGHT, MAZE, playerx, playery, EXITX, EXITY
 
     with open('maze10x10.txt', 'r', encoding='UTF-8') as f: # TODO: add an option for the user to pick the file
         MAZE = f.read()
@@ -34,8 +34,8 @@ def init():
     playerx = 0
     playery = 0
 
-    exitx = 0
-    exity = 0
+    EXITX = 0
+    EXITY = 0
 
     for i in range(HEIGHT):
         for j in range(WIDTH):
@@ -44,8 +44,8 @@ def init():
                 playery = j
 
             if MAZE[i][j] == 'E':
-                exitx = i
-                exity = j
+                EXITX = i
+                EXITY = j
 
 
 def draw_maze():
@@ -54,7 +54,7 @@ def draw_maze():
         for y in range(HEIGHT):
             if (x, y) == (playerx, playery):
                 print(PLAYER, end='')
-            elif (x, y) == (exitx, exity):
+            elif (x, y) == (EXITX, EXITY):
                 print('X', end='')
             elif MAZE[x][y] == WALL:
                 print(BLOCK, end='')
@@ -110,7 +110,7 @@ while True:
         if direction == 'quit':
             break
 
-        if (playerx, playery) == (exitx, exity):
+        if (playerx, playery) == (EXITX, EXITY):
             draw_maze()
             break
     except KeyboardInterrupt:

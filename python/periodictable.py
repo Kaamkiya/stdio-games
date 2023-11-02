@@ -8,8 +8,8 @@ import json
 import requests
 
 # fetch the json data
-ELEMENTS = requests.get('https://api.dedolist.com/api/v1/science/periodic-table-detailed/')
-ELEMENTS = json.loads(ELEMENTS.text)
+with open('../assets/periodic_table.json') as f:
+    ELEMENTS = json.loads(f.read())
 
 ALL_STATS = ['name', 'number', 'atomic_mass', 'category', 'boil', 'density']
 LONGEST_ROW = len('atomic_mass')
@@ -36,7 +36,7 @@ while True:
 
     if response == 'Quit':
         break # exit the program
-    
+
     for i, element in enumerate(ELEMENTS):
         if element['symbol'] == response:
             for key in ALL_STATS:
