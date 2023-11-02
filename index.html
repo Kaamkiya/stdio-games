@@ -27,8 +27,10 @@
   </head>
   <body>
     <h1>stdio-games</h1>
-    <button id="theme-button">☼</button>
+    <button id="theme-button">☀</button>
+    
     <hr/>
+    
     <div id="info">
       This is a collection of games, animations, and other cool things. <br/>
       They are coded in 
@@ -167,12 +169,12 @@ java &lt;GAME&gt;
         if (theme == 'light') {
           theme = 'dark';
           themeImporter.setAttribute('href', 'https://unpkg.com/@highlightjs/cdn-assets@11.9.0/styles/nord.min.css');
-          themeButton.innerText = '☼';
+          themeButton.innerText = '☾';
           metaTheme.setAttribute('content', theme);
         } else {
           theme = 'light';
           themeImporter.setAttribute('href', 'https://unpkg.com/@highlightjs/cdn-assets@11.9.0/styles/default.min.css');
-          themeButton.innerText = '☾';
+          themeButton.innerText = '☀';
           metaTheme.setAttribute('content', theme);
         }
       };
