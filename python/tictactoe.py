@@ -2,6 +2,9 @@
 Tic Tac Toe by Kaamkiya
 """
 
+import sys
+
+
 __version__ = '0.0.3'
 
 TURN = 'x' # the first player is always x
@@ -23,7 +26,7 @@ def print_board(b):
     print('2   '+b[2][0]+'|'+b[2][1]+'|'+b[2][2]) # bottom row
     print()
 
-def place(turb):
+def place(turn):
     """Get the place that the user wants to go
     and see if they can go there."""
     pos = input()
