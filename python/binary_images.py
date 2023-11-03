@@ -63,17 +63,15 @@ print('-' * get_terminal_size()[0])
 
 print_image(IMAGES['coffee'])
 
-"""
-TO GET IMAGE DATA
+# TO GET IMAGE DATA
 
-go to
-https://editor.p5js.org/Kaamkiya/sketches/a4fyz5ynL
+# go to
+# https://editor.p5js.org/Kaamkiya/sketches/a4fyz5ynL
 
-Where it says "Replace the link with your url",
-replace the existing link with your url.
+# Where it says "Replace the link with your url",
+# replace the existing link with your url.
 
-Copy the first thing that shows up in the console when you run it.
-That's the data.
+# Copy the first thing that shows up in the console when you run it.
+# That's the data.
 
-Copy the second for the width, and the third for the height
-""""""
+# Copy the second for the width, and the third for the height

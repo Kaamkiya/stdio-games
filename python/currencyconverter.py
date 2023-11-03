@@ -24,8 +24,8 @@ while True: # main loop
 
     try:
         response = requests.get(
-            'https://api.frankfurter.app/latest?from=%s&to=%s&amount=%s'
-            %(from_currency, to_currency, amount), # fetch the amount from the api
+            # fetch the amount from the api
+            f'https://api.frankfurter.app/latest?from={from_currency}&to={to_currency}&amount={amount}', 
             timeout=7.0 # wait a maximum of 7 seconds before giving an error or continuing
         )
     except requests.exceptions.Timeout: # if there's a timeout error

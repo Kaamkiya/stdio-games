@@ -4,7 +4,7 @@ Tic Tac Toe by Kaamkiya
 
 __version__ = '0.0.3'
 
-turn = 'x' # the first player is always x
+TURN = 'x' # the first player is always x
 
 board = [
     [' ', ' ', ' '], # set up the board to a 2d, fully empty, list
@@ -23,7 +23,7 @@ def print_board(b):
     print('2   '+b[2][0]+'|'+b[2][1]+'|'+b[2][2]) # bottom row
     print()
 
-def place(turn):
+def place(turb):
     """Get the place that the user wants to go
     and see if they can go there."""
     pos = input()
@@ -33,7 +33,7 @@ def place(turn):
         else: # if that spot is taken
             print('Must be Y-coordinate+X-coordinate. Eg, 02')
             place(turn)
-    except:
+    except IndexError, ValueError:
         print('Must be Y-coordinate+X-coordinate. Eg, 02')
         place(turn) # if the user enters anything other than a number
 
@@ -43,10 +43,12 @@ def check_win(b):
     for i in range(3):
         if b[i] == ['x', 'x', 'x']: # check for each row of the board if x won
             print('x wins!')
-            return 'gameover'
+            print_board(b)
+            sys.exit()
         if b[i] == ['o', 'o', 'o']: # same for o
             print('o wins!')
-            return 'gameover'
+            print_board(b)
+            sys.exit()
 
     x = 0
     o = 0
@@ -57,10 +59,12 @@ def check_win(b):
             o += 1
         if x == 3:
             print('x wins!')
-            return 'gameover'
+            print_board(b)
+            sys.exit()
         if o == 3:
             print('o wins!')
-            return 'gameover'
+            print_board(b)
+            sys.exit()
     x = 0
     o = 0
     for i in range(3):
@@ -70,10 +74,12 @@ def check_win(b):
             o += 1
         if x == 3:
             print('x wins!')
-            return 'gameover'
+            print_board(b)
+            sys.exit()
         if o == 3:
             print('o wins!')
-            return 'gameover'
+            print_board(b)
+            sys.exit()
     x = 0
     o = 0
     for i in range(3):
@@ -83,10 +89,12 @@ def check_win(b):
             o += 1
         if x == 3:
             print('x wins!')
-            return 'gameover'
+            print_board(b)
+            sys.exit()
         if o == 3:
             print('o wins!')
-            return 'gameover'
+            print_board(b)
+            sys.exit()
     x = 0
     o = 0
     for i in range(3):
@@ -104,19 +112,18 @@ def check_win(b):
 
     if x == 3:
         print('Tie')
-        return 'gameover'
+        print_board(b)
+            sys.exit()
 
 
 while True:
     print_board(board)
-    print('%s\'s turn' %turn)
-    place(turn)
+    print(f'{TURN}\'s turn')
+    place(TURN)
 
-    if turn=='x':
-        turn = 'o'
+    if TURN=='x':
+        TURN = 'o'
     else:
-        turn = 'x'
+        TURN = 'x'
 
-    if check_win(board) == 'gameover':
-        print_board(board)
-        break
+    check_win(board)

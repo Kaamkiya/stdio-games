@@ -1,7 +1,13 @@
+"""Typing test
+
+This is a game to see howmany words per minute the user can type,
+and with what percent accuracy
+"""
+
 import time
 import random
 
-with open('../assets/sentences.txt') as f:
+with open('../assets/sentences.txt', 'r', encoding='utf-8') as f:
     SENTENCES = f.readlines()
 
     for i, sentence in enumerate(SENTENCES):

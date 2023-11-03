@@ -40,7 +40,7 @@ while n != 1:
 
     print(',', str(n), end='', flush=True)
     time.sleep(0.1)
-    amount_of_steps += 1
+    amount_of_steps = amount_of_steps + 1
 
 print('\nAmount of steps taken to get to 1:', str(amount_of_steps))
 print()

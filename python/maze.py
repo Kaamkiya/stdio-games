@@ -17,35 +17,33 @@ BLOCK = chr(9608) # what the player sees as the wall: '█'
 # then replace the U+ with 0x and put it in a chr function, like so:
 # chr(0x26F3)
 
-def init():
-    """Initialized the game"""
-    global WIDTH, HEIGHT, MAZE, playerx, playery, EXITX, EXITY
+WIDTH, HEIGHT, MAZE, playerx, playery, EXITX, EXITY
 
-    with open('maze10x10.txt', 'r', encoding='UTF-8') as f: # TODO: add an option for the user to pick the file
-        MAZE = f.read()
-        HEIGHT = len(MAZE.split('\n'))
-        WIDTH = len(list(MAZE.split('\n')))
+with open('maze10x10.txt', 'r', encoding='UTF-8') as f:
+    MAZE = f.read()
+    HEIGHT = len(MAZE.split('\n'))
+    WIDTH = len(list(MAZE.split('\n')))
 
-    MAZE = MAZE.split('\n')# split the MAZE into rows
+MAZE = MAZE.split('\n')# split the MAZE into rows
 
-    for i in range(HEIGHT):
-        MAZE[i] = list(MAZE[i])
+for i in range(HEIGHT):
+    MAZE[i] = list(MAZE[i])
 
-    playerx = 0
-    playery = 0
+playerx = 0
+playery = 0
 
-    EXITX = 0
-    EXITY = 0
+EXITX = 0
+EXITY = 0
 
-    for i in range(HEIGHT):
-        for j in range(WIDTH):
-            if MAZE[i][j] == 'S':
-                playerx = i
-                playery = j
+for i in range(HEIGHT):
+    for j in range(WIDTH):
+        if MAZE[i][j] == 'S':
+            playerx = i
+            playery = j
 
-            if MAZE[i][j] == 'E':
-                EXITX = i
-                EXITY = j
+        if MAZE[i][j] == 'E':
+            EXITX = i
+            EXITY = j
 
 
 def draw_maze():
@@ -61,8 +59,6 @@ def draw_maze():
             else:
                 print(MAZE[x][y], end='')
         print()  # Print a newline after printing the row.
-
-init()
 
 while True:
     try:
@@ -84,28 +80,28 @@ while True:
                 print('That spot is taken, sorry.')
                 continue
 
-            playery -= 1
+            playery = playery - 1
 
         if direction == 'd':
             if MAZE[playerx][playery+1] == '#':
                 print('That spot is taken, sorry.')
                 continue
 
-            playery += 1
+            playery = playery + 1
 
         if direction == 'w':
             if MAZE[playerx-1][playery] == '#':
                 print('That spot is taken, sorry.')
                 continue
 
-            playerx -= 1
+            playerx = playerx - 1
 
         if direction == 's':
             if MAZE[playerx+1][playery] == '#':
                 print('That spot is taken, sorry.')
                 continue
 
-            playerx += 1
+            playerx = playerx + 1
 
         if direction == 'quit':
             break

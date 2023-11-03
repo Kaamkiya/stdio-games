@@ -27,7 +27,7 @@ def main():
 
     total = 0
 
-    for i in range(amount_of_dice):
+    for _ in range(amount_of_dice):
         # add a random number between 1 and the number of sides to the total
         total += random.randint(1, amount_of_sides)
 

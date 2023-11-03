@@ -5,10 +5,10 @@ teach the user about the Periodic Table of Elements
 """
 
 import json
-import requests
+
 
 # fetch the json data
-with open('../assets/periodic_table.json') as f:
+with open('../assets/periodic_table.json', 'r', encoding='utf-8') as f:
     ELEMENTS = json.loads(f.read())
 
 ALL_STATS = ['name', 'number', 'atomic_mass', 'category', 'boil', 'density']
