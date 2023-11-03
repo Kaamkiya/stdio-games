@@ -4,10 +4,10 @@ Maze
 This is a maze game
 """
 
-playerx = playery = EXITX = EXITY = None
+PLAYERX = PLAYERY = EXITX = EXITY = None
 MAZE = WIDTH = HEIGHT = None
 
-PLAYER = '@' # try changing this
+PLAYER = '@' # try changing this to '+' or 'o'
 WALL = '#'
 EMPTY = ' '
 EXIT = 'E'
@@ -17,7 +17,6 @@ BLOCK = chr(9608) # what the player sees as the wall: '█'
 # then replace the U+ with 0x and put it in a chr function, like so:
 # chr(0x26F3)
 
-WIDTH, HEIGHT, MAZE, playerx, playery, EXITX, EXITY
 
 with open('maze10x10.txt', 'r', encoding='UTF-8') as f:
     MAZE = f.read()
@@ -29,17 +28,11 @@ MAZE = MAZE.split('\n')# split the MAZE into rows
 for i in range(HEIGHT):
     MAZE[i] = list(MAZE[i])
 
-playerx = 0
-playery = 0
-
-EXITX = 0
-EXITY = 0
-
 for i in range(HEIGHT):
     for j in range(WIDTH):
         if MAZE[i][j] == 'S':
-            playerx = i
-            playery = j
+            PLAYERX = i
+            PLAYERY = j
 
         if MAZE[i][j] == 'E':
             EXITX = i
@@ -50,7 +43,7 @@ def draw_maze():
     """Display the maze:"""
     for x in range(WIDTH):
         for y in range(HEIGHT):
-            if (x, y) == (playerx, playery):
+            if (x, y) == (PLAYERX, PLAYERY):
                 print(PLAYER, end='')
             elif (x, y) == (EXITX, EXITY):
                 print('X', end='')
@@ -76,37 +69,37 @@ while True:
             continue
 
         if direction == 'a':
-            if MAZE[playerx][playery-1] == '#':
+            if MAZE[PLAYERX][PLAYERY-1] == '#':
                 print('That spot is taken, sorry.')
                 continue
 
-            playery = playery - 1
+            PLAYERY = PLAYERY - 1
 
         if direction == 'd':
-            if MAZE[playerx][playery+1] == '#':
+            if MAZE[PLAYERX][PLAYERY+1] == '#':
                 print('That spot is taken, sorry.')
                 continue
 
-            playery = playery + 1
+            PLAYERY = PLAYERY + 1
 
         if direction == 'w':
-            if MAZE[playerx-1][playery] == '#':
+            if MAZE[PLAYERX-1][PLAYERY] == '#':
                 print('That spot is taken, sorry.')
                 continue
 
-            playerx = playerx - 1
+            PLAYERX = PLAYERX - 1
 
         if direction == 's':
-            if MAZE[playerx+1][playery] == '#':
+            if MAZE[PLAYERX+1][PLAYERY] == '#':
                 print('That spot is taken, sorry.')
                 continue
 
-            playerx = playerx + 1
+            PLAYERX = PLAYERX + 1
 
         if direction == 'quit':
             break
 
-        if (playerx, playery) == (EXITX, EXITY):
+        if (PLAYERX, PLAYERY) == (EXITX, EXITY):
             draw_maze()
             break
     except KeyboardInterrupt:

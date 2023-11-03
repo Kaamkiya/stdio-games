@@ -9,11 +9,11 @@ import requests
 while True: # main loop
     print('What currency would you like to convert from?')
     # get an input, convert it to upper case, and remove whitespace
-    from_currency = input('> ').upper().strip()
+    from_curr = input('> ').upper().strip()
 
     print('What currency would you like to convert to?')
     # get the currency to convert to, convert it to uppercase, and get rid of extra whitespace
-    to_currency = input('> ').upper().strip()
+    to_curr = input('> ').upper().strip()
 
     try:
         print('How much money would you like to convert?')
@@ -25,7 +25,7 @@ while True: # main loop
     try:
         response = requests.get(
             # fetch the amount from the api
-            f'https://api.frankfurter.app/latest?from={from_currency}&to={to_currency}&amount={amount}', 
+            f'https://api.frankfurter.app/latest?from={from_curr}&to={to_curr}&amount={amount}', 
             timeout=7.0 # wait a maximum of 7 seconds before giving an error or continuing
         )
     except requests.exceptions.Timeout: # if there's a timeout error
@@ -42,7 +42,7 @@ while True: # main loop
 
 
     response = response.json()
-    print('The amount in', to_currency, 'is ', response['rates'][to_currency], '.')
+    print('The amount in', to_curr, 'is ', response['rates'][to_curr], '.')
 
     while True:
         print('Would you like to go again? (y/n)')

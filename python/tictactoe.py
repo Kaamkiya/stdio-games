@@ -33,7 +33,10 @@ def place(turb):
         else: # if that spot is taken
             print('Must be Y-coordinate+X-coordinate. Eg, 02')
             place(turn)
-    except IndexError, ValueError:
+    except IndexError:
+        print('Must be Y-coordinate+X-coordinate. Eg, 02')
+        place(turn) # if the user enters a number that's too big
+    except ValueError:
         print('Must be Y-coordinate+X-coordinate. Eg, 02')
         place(turn) # if the user enters anything other than a number
 
@@ -113,7 +116,7 @@ def check_win(b):
     if x == 3:
         print('Tie')
         print_board(b)
-            sys.exit()
+        sys.exit()
 
 
 while True:

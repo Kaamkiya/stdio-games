@@ -26,7 +26,7 @@ if not response.isdecimal() or response == '0':
     print('You must enter an integer greater than 0.')
     sys.exit()
 
-amount_of_steps = 0
+AMOUNT_OF_STEPS = 0
 
 n = int(response)
 
@@ -40,7 +40,7 @@ while n != 1:
 
     print(',', str(n), end='', flush=True)
     time.sleep(0.1)
-    amount_of_steps = amount_of_steps + 1
+    AMOUNT_OF_STEPS += 1
 
-print('\nAmount of steps taken to get to 1:', str(amount_of_steps))
+print('\nAmount of steps taken to get to 1:', str(AMOUNT_OF_STEPS))
 print()
