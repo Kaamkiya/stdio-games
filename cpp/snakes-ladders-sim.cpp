@@ -6,6 +6,7 @@
 
 #include <iostream>
 #include <vector>
+#include <algorithm>
 
 /**Return a random number between 1 and 6*/
 int roll_dice() {
@@ -83,6 +84,9 @@ int main() {
     total_moves / sims_to_run <<
     " moves to win." <<
     std::endl;
+    
+  std::cout << "The longest game lasted " << *std::max_element(amount_of_moves.begin(), amount_of_moves.end()) << " moves." << std::endl;
+  std::cout << "The shortest game lasted " << *std::min_element(amount_of_moves.begin(), amount_of_moves.end()) << " moves." << std::endl;
 
   return 0;
 }
