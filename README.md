@@ -104,6 +104,10 @@ $ java <FILE>
 Where `<FILE>` is the name of the file you compiled. 
 </details>
 
+## About the games
+
+To learn about each individual game and it's purpose, visit the [wiki](https://github.com/Kaamkiya/stdio-games/wiki).
+
 ## Contributing:
 
 I welcome contributions. If you want to help, see the [contributing docs](.github/CONTRIBUTING.md).
