@@ -1,8 +1,3 @@
----
-permalink: /.github/code-of-conduct.html
-title: Code of Conduct
----
-
 # Contributor Covenant Code of Conduct
 
 ## Our Pledge
