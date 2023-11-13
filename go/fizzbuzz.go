@@ -11,7 +11,10 @@ Else, print the number
 
 package main
 
-import "fmt"
+import (
+        "fmt"
+        "log"
+)
 
 func main() {
         fmt.Println(`FizzBuzz
@@ -27,8 +30,9 @@ Otherwise, simply print the number.`)
 
         fmt.Println("How high would you like to go?")
         _, err := fmt.Scan(&max) // _, err := means catch the values this returns
+
         if err != nil { // if there is an error, 
-                fmt.Println("\033[31;1mError") // print it
+                log.Fatal(err) // print it
                 return // and exit
         }
 
