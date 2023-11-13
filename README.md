@@ -2,7 +2,7 @@
 
 A collection of games and animations, as well as animations, that use only the standard i/o (input/output).
 
-They are coded in [C++](https://devdocs.io/cpp/), [Python](https://docs.python.org/), [Ruby](https://ruby-lang.org/), and [Java](https://java.com/).
+They are coded in [C++](https://devdocs.io/cpp/), [Python](https://docs.python.org/), [Go](https://go.dev/), [Ruby](https://ruby-lang.org/), and [Java](https://java.com/).
 
 ## Installation
 
@@ -111,6 +111,15 @@ To learn about each individual game and it's purpose, visit the [wiki](https://g
 ## Contributing:
 
 I welcome contributions. If you want to help, see the [contributing docs](.github/CONTRIBUTING.md).
+
+## Sidenotes
+
+There will be quite a few coding languages in this repo, as I am trying out a lot and sticking with what I like.
+
+That said, here are the languages I am not personally updating:
+
+* Java
+* Ruby
 
 [^1]: g++ must be installed to compile C++ games
 [^2]: python is needed to run the Python projects
