@@ -61,6 +61,28 @@ It should start running the code!
 </details>
 
 <details>
+<summary><h4>Go</h4></summary>
+
+To play the Golang games, you have to `cd` into the `go` directory. 
+
+Then, run the following command to compile[^1] a game:
+
+```bash
+$ go build <GAME>.go
+```
+
+Don't forget to replace `<GAME>` with one of the files.
+
+To run the code, type the follwing command and hit enter:
+
+```bash
+$ ./<GAME>
+```
+
+This will tell the terminal/command prompt to execute the compiled code. That's it!
+</details>
+
+<details>
 <summary><h4>Ruby</h4></summary>
 
 To run the Ruby games, `cd` into the directory:
@@ -125,3 +147,4 @@ That said, here are the languages I am not personally updating:
 [^2]: python is needed to run the Python projects
 [^3]: ruby-full is needed to run any of the Ruby games
 [^4]: default-jdk is required to run and compile Java
+[^5]: golang >=1.21 is required for exuction and compilation of Golang
