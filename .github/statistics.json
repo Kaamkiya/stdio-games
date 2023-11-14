@@ -1,11 +1,12 @@
 {
     "languages": {
-        "count": 4,
-        "languages": ["cpp", "python", "ruby", "java"]
+        "count": 5,
+        "languages": ["cpp", "python", "go", "ruby", "java"]
     },
     "projects": {
         "cpp": 8,
         "python": 13,
+        "go": 6,
         "ruby": 2,
         "java": 3
     }
