@@ -6,7 +6,7 @@ Ils sont fait en [C++](https://devdocs.io/cpp/), [Python](https://docs.python.or
 
 ## Installation
 
-T'a besoin de `git` pour jouer ces jeux:
+Vous avez besoin de `git` pour jouer ces jeux:
 
 ```bash
 $ git clone https://github.com/Kaamkiya/stdio-games.git
@@ -104,7 +104,7 @@ Faites certaines a replacer `<JEUX>` avec une des jeux dans la dossier!
 
 ## À propos des jeux
 
-Pour apprendre à propos de chaque jeu, jetez un coup d'oeuil a la (seulement un anglias pour l'instant) [wiki](https://github.com/Kaamkiya/stdio-games/wiki).
+Pour apprendre à propos de chaque jeu, jetez un coup d'oeuil a la (seulement en anglais pour l'instant) [wiki](https://github.com/Kaamkiya/stdio-games/wiki).
 
 ## Contribuer
 
