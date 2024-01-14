@@ -2,7 +2,7 @@
 
 A collection of games and animations, as well as animations, that use only the standard i/o (input/output).
 
-They are coded in [C++](https://devdocs.io/cpp/), [Go](https://go.dev/), [Python](https://docs.python.org/), [x86_64 Intel Assembly](https://web.stanford.edu/class/cs107/guide/x86-64.html), [C](https://devdocs.io/c/), [Ruby](https://ruby-lang.org/), and [Java](https://java.com/).
+They are coded in [C++](https://devdocs.io/cpp/), [Go](https://go.dev/), [Python](https://docs.python.org/), [C](https://devdocs.io/c/), [Ruby](https://ruby-lang.org/), and [Java](https://java.com/).
 
 ## Installation
 
@@ -152,36 +152,6 @@ $ java <FILE>
 Where `<FILE>` is the name of the file you compiled. 
 </details>
 
-<details>
-<summary><h4>Assembly x86_64</h4></summary>
-This is the most complex, so I've saved it for last. 
-
-You first have to switch in to the `asm` directory:
-
-```bash
-$ cd asm
-```
-
-Then, use the `nasm` command to compile to an object file:
-
-```bash
-$ nasm -f elf64 -o a.o <FILE>.asm
-```
-
-Then, use the `ld` command to compile into byte code:
-
-```bash
-$ ld -o a.out a.o
-```
-
-Finally, run the compiled code:
-
-```bash
-$ ./a.out
-```
-
-Have fun!
-</details>
 
 ## About the games
 
